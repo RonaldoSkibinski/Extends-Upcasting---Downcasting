@@ -9,14 +9,14 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 			
-		Account acc = new Account(1001, "Ronaldo", 500.0);
+		Account acc = new Account(1001, "Ronaldo", 1000.0);
 		BusinessAccount bAccount = new BusinessAccount(1002, "Alex", 1000.00, 500.0);
 		
 		// UPCASTING
 		
 		Account accOne = bAccount;
-		Account accTwo = new BusinessAccount(1003, "Bob", 0.0, 200.0);
-		Account accThree = new SavingsAccount(1004, "Anna", 0.0, 0.01);
+		Account accTwo = new BusinessAccount(1003, "Bob", 1000.0, 200.0);
+		Account accThree = new SavingsAccount(1004, "Anna", 1000.0, 0.01);
 		
 		// DOWNCASTING
 		
@@ -34,6 +34,14 @@ public class Main {
 			accFive.updateBalance();
 			System.out.println("Update!");
 		}
+		
+		acc.withdraw(200);
+		accTwo.withdraw(200);
+		accThree.withdraw(200);
+		
+		System.out.println(acc.getBalance());
+		System.out.println(accTwo.getBalance());
+		System.out.println(accThree.getBalance());
 		
 	}
 
